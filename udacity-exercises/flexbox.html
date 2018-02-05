@@ -1,0 +1,73 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Flexbox</title>
+    </head>
+    <style>
+        .container{
+            width: 100%;
+            display: flex; 
+            /* flex-wrap: wrap;            */
+        }
+        .title{
+            font-size: 2.5em;
+            text-align: center;
+
+        }
+        .box{
+            width: 200px;
+			min-height: 100px;
+
+			
+        }
+        .dark_blue{
+           background-color: darkblue;
+        }
+        .light_blue{
+            background-color: lightblue;
+        }
+        .green{
+            background-color: green;
+        }
+        .orange{
+            background-color: rgb(228, 177, 10);
+        }
+        .red{
+            background-color: rgb(128, 0, 0);
+        }
+
+        @media screen and (min-width: 700px) {
+            .dark_blue{ order: 4}
+            .light_blue{ order: 5}
+            .green{ order: 2}
+            .orange{ order: 3}
+            .red{ order: 1}
+        }
+    </style>
+    
+    <body> 
+        <div class="title">
+            "flex item:"
+            <code>Order</code>
+        </div>         
+        <div class="container">
+            <div class="box dark_blue">
+                dark_blue
+            </div>
+            <div class="box light_blue">
+                light_blue
+            </div>
+            <div class="box green">
+                green
+            </div>
+            <div class="box orange">
+                    orange
+            </div>
+            <div class="box red">
+                    red
+            </div>
+        </div>
+    </body>
+    </html>

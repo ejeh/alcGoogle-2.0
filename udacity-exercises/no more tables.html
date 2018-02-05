@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>No more table </title>
+</head>
+<style>
+    @media screen and (max-width: 500px) {
+        tables, thead, tbody, tr, td, th {
+            display: block;
+        }
+        thead tr, th{
+            position: absolute;
+            left: -9999px;
+            right: -9999px;
+
+        }
+        td {
+            position: relative;
+            padding-left: 100%;
+        }
+        td:before{
+            position: absolute;
+            left: 6px;
+            content: attr(data-th);
+            font-weight: bold;
+        }
+    }
+</style>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Teams</th>
+                <th>1st</th>
+                <th>2nd</th>
+                <th>3rd</th>
+                <th>4th</th>
+                <th>5th</th>
+                <th>6th</th>
+                <th>7th</th>
+                <th>8th</th>
+                <th>9th</th>
+                <th>Final</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-th="Teams">Toronto</td>
+                <td data-th="1st">0</td>
+                <td data-th="2nd">0</td>
+                <td data-th="3rd">0</td>
+                <td data-th="4th">4</td>
+                <td data-th="5th">0</td>
+                <td data-th="6th">1</td>
+                <td data-th="7th">0</td>
+                <td data-th="8th">0</td>
+                <td data-th="9th">0</td>
+                <td data-th="Final">5</td>
+            </tr>
+          
+            <tr>
+                <td data-th="Teams">San Francisco</td>
+                <td data-th="1st">0</td>
+                <td data-th="2nd">0</td>
+                <td data-th="3rd">0</td>
+                <td data-th="4th">4</td>
+                <td data-th="5th">0</td>
+                <td data-th="6th">1</td>
+                <td data-th="7th">0</td>
+                <td data-th="8th">0</td>
+                <td data-th="9th">0</td>
+                <td data-th="Final">5</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
